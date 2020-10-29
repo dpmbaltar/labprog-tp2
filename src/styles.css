@@ -82,10 +82,16 @@ main h1 {
 	font-size: 4em;
 	font-weight: 600;
 	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.cardActual .temp h3 {
+	margin-top: 0;
 }
 
 .cardActual .temp h1,
-.cardActual .temp h2 {
+.cardActual .temp h2,
+.cardActual .temp h3 {
 	text-align: center;
 	text-shadow: #325F7E 1px 1px;
 }
