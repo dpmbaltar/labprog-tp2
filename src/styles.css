@@ -48,24 +48,70 @@ main h1 {
 	font-size: 2em;
 }
   
-h2 {
+/*h2 {
 	color: blue;
 	font-family: Garamond;
 	font-size: 2em;
-}
+}*/
 
 .cardActual {
-	background-image: linear-gradient(to bottom, #113850, #2B5572);
-	display: inline-block;
+	/*background-image: linear-gradient(to bottom, #2E5D7B, #436985);*/
+	background-color: #76babb;
+	/*display: flex;*/
+	/*margin: 0;*/
 
-	padding: 20px;
-
-	transition: box-shadow background-image;
-	transition-duration: .4s;
-
-	display: flex;
+	/*display: flex;
 	align-items: center;
+	flex-wrap: wrap;*/
 	/*background-image: linear-gradient(to bottom right, #4f4f4f, #3f3f3f);*/
+}
+
+.cardActual .titulo {
+	padding: .6em .6em 0 .6em;
+	margin: 0;
+	display: flex;
+	font-size: 2em;
+	font-weight: 600;
+}
+
+.cardActual .hoy {
+	display: flex;
+	padding: .6em 1em;
+}
+
+.cardActual .icon,
+.cardActual .temp {
+	margin: 0;
+	/*flex-grow: 0;
+	display: flex;*/
+}
+
+.cardActual .icon {
+	margin-right: 2em;
+}
+
+.cardActual .temp {
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+.cardActual .temp h1 {
+	font-size: 4em;
+	margin: .6em 0;
+	margin-bottom: 0;
+}
+
+.cardActual .temp h2 {
+	font-size: 3em;
+	font-weight: 600;
+	margin-top: 0;
+}
+
+.cardActual .temp h1,
+.cardActual .temp h2 {
+	text-align: center;
 }
 
 /* Contenedor de tarjetas */
@@ -75,7 +121,7 @@ h2 {
 	margin-bottom: 2em;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 20px;
+	padding: 1em;
 	box-shadow: 0 .2em 4em rgba(0,0,0,.8);
 	border-radius: 4px;
 }
