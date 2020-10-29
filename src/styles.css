@@ -3,14 +3,17 @@
  * Trabajo Práctico 02
  * 
  */
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
 
-
-body {
+ body {
 	font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
-	color: #f0f0f0;
+	color: #fafafa;
 	margin: 0;
 	padding: 0;
-	background: #0f0f0f;
+	background: #1c2127;
+	background-image: url("images/cloudy.jpg");
+	background-position: top center;
+	background-attachment: fixed;
 }
 
 main {
@@ -19,69 +22,170 @@ main {
 	margin-right: auto;
 }
 
-.section {
-	background: #2f2f2f;
-	margin-top: 38px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 20px;
+main h1 {
+	font-weight: 800;
+	margin: 1em;
+}
+  
+/* Contenedor de mensajes */
+.message{  
+  background: #7A9E9F;
+	margin:auto;
+
+  padding: 1%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 	/*border: 1px solid #ccc;*/
 	box-shadow: 0 2px 38px rgba(0,0,0,.8);
 	border-radius: 4px;
 }
 
-.section .card {
-	margin-left: 20px;
+.message h1 {
+	color: yellow;
+	font-family: Garamond;
+	font-size: 2em;
+}
+  
+h2 {
+	color: blue;
+	font-family: Garamond;
+	font-size: 2em;
 }
 
-.section .card:first-child {
-	margin-left: 0;
-}
-
-.card {
-	background-image: linear-gradient(to bottom right, #4f4f4f, #3f3f3f);
+.cardActual {
+	background-image: linear-gradient(to bottom, #113850, #2B5572);
 	display: inline-block;
-	min-width: 200px;
+
 	padding: 20px;
+
+	transition: box-shadow background-image;
+	transition-duration: .4s;
+
+	display: flex;
+	align-items: center;
+	/*background-image: linear-gradient(to bottom right, #4f4f4f, #3f3f3f);*/
+}
+
+/* Contenedor de tarjetas */
+.section {
+	background: #1E252B;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	box-shadow: 0 .2em 4em rgba(0,0,0,.8);
+	border-radius: 4px;
+}
+  
+/**
+ * Estilo de listado de próximos 10 días
+ */
+
+.section .card {
+	background-color: #313A44;
+	padding: 1em;
+	margin: 1em;
 	border-radius: 4px;
 	transition: box-shadow background-image;
 	transition-duration: .4s;
+	display: flex;
+	align-items: center;
 }
 
-.card img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.card h1,
-.card h2,
-.card h4,
-.card p {
-	text-align: center;
-}
-
-.card:hover {
-	background-image: linear-gradient(to bottom right, #6f6f6f, #4f4f4f);
+.section .card:hover {
+	background-color: #325F7E;
+	/*background-image: linear-gradient(to bottom right, #6f6f6f, #4f4f4f);*/
 	transition: box-shadow background-image;
 	transition-duration: .4s;
 	box-shadow: 0 2px 38px rgba(0,0,0,.8);
 }
+/* Columna */
+.section .card .col {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+}
+/* Columnas especíificas */
+.section .card .col.date,  /* Columna de Fecha */
+.section .card .col.temp,  /* Columna de Temperatura */
+.section .card .col.humid, /* Columna de Humedad */
+.section .card .col.wind { /* Columna de Viento */
+	display: flex;
+	flex-grow: 0;
+	padding: .4em .8em;
+	width: 6em;
+	justify-content: flex-start;
+}
 
+.section .card .col.temp,
+.section .card .col.humid {
+	width: 5em;
+}
+
+.section .card .col.wind {
+	width: 9em;
+}
+/* Temperatura */
+.section .card .col.temp .deg {
+	font-weight: 800;
+	font-size: 1.5em;
+}
+/* Columna de detalle del tiempo */
+.section .card .col.detail {
+	display: flex;
+	justify-content: flex-start;
+}
+/* Iconos dentro de las columnas */
+.section .card .col .icon {
+	margin: 0;
+	margin-right: .4em;
+}
+
+.section .card.btn {
+	text-align: center;
+	color: #d9d9d9;
+	font-size: 1.2em;
+	font-weight: bold;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.section .card.btn:hover {
+	background-color: #113F5A;
+	color: #fafafa;
+}
+
+/* Menu principal */
 #nav {
-	background-color: #2f2f2f;
-	box-shadow: 0 2px 38px rgba(0,0,0,.8);
+	background-color: #1c2127;
+	box-shadow: 0 .1em 2em rgba(0,0,0,.8);
 }
 
 #nav ul {
-	margin: 0;
+	margin: auto;
+	display: flex;
+	max-width: 960px;
+	justify-content: flex-start;
+	list-style: none;
 }
 
 #nav ul li {
-	display: inline-block;
+	display: flex;
 }
 
 #nav ul li a {
+	font-size: 1.2em;
+	font-weight: 600;
+	text-decoration: none;
+	color: #d9d9d9;
 	display: block;
-	padding: 10px;
+	padding: 1em;
+}
+  
+#nav ul li a:hover {
+	background-color: #113F5A;
+	color: #fafafa;
 }
