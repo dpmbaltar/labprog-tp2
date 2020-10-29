@@ -25,34 +25,8 @@ main {
 main h1 {
 	font-weight: 800;
 	margin: 1em;
+	text-shadow: #1c2127 1px 1px;
 }
-  
-/* Contenedor de mensajes */
-.message{  
-  background: #7A9E9F;
-	margin:auto;
-
-  padding: 1%;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-	/*border: 1px solid #ccc;*/
-	box-shadow: 0 2px 38px rgba(0,0,0,.8);
-	border-radius: 4px;
-}
-
-.message h1 {
-	color: yellow;
-	font-family: Garamond;
-	font-size: 2em;
-}
-  
-/*h2 {
-	color: blue;
-	font-family: Garamond;
-	font-size: 2em;
-}*/
 
 .cardActual {
 	/*background-image: linear-gradient(to bottom, #2E5D7B, #436985);*/
@@ -72,6 +46,7 @@ main h1 {
 	display: flex;
 	font-size: 2em;
 	font-weight: 600;
+	text-shadow: #325F7E 1px 1px;
 }
 
 .cardActual .hoy {
@@ -104,7 +79,7 @@ main h1 {
 }
 
 .cardActual .temp h2 {
-	font-size: 3em;
+	font-size: 4em;
 	font-weight: 600;
 	margin-top: 0;
 }
@@ -112,6 +87,7 @@ main h1 {
 .cardActual .temp h1,
 .cardActual .temp h2 {
 	text-align: center;
+	text-shadow: #325F7E 1px 1px;
 }
 
 /* Contenedor de tarjetas */
