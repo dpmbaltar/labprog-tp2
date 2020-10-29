@@ -29,15 +29,7 @@ main h1 {
 }
 
 .cardActual {
-	/*background-image: linear-gradient(to bottom, #2E5D7B, #436985);*/
 	background-color: #76babb;
-	/*display: flex;*/
-	/*margin: 0;*/
-
-	/*display: flex;
-	align-items: center;
-	flex-wrap: wrap;*/
-	/*background-image: linear-gradient(to bottom right, #4f4f4f, #3f3f3f);*/
 }
 
 .cardActual .titulo {
@@ -57,8 +49,6 @@ main h1 {
 .cardActual .icon,
 .cardActual .temp {
 	margin: 0;
-	/*flex-grow: 0;
-	display: flex;*/
 }
 
 .cardActual .icon {
@@ -125,7 +115,6 @@ main h1 {
 
 .section .card:hover {
 	background-color: #325F7E;
-	/*background-image: linear-gradient(to bottom right, #6f6f6f, #4f4f4f);*/
 	transition: box-shadow background-image;
 	transition-duration: .4s;
 	box-shadow: 0 2px 38px rgba(0,0,0,.8);
